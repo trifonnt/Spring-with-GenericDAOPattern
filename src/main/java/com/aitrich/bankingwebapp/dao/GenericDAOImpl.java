@@ -28,10 +28,10 @@ import org.springframework.transaction.annotation.Transactional;
  * @param <T> the entity class related to this DAO.
  * @param <ID> the type of the field that represents the entity class' primary key.
  * 
- * <h5>&copy;2012 Aitrich Technologies. All rights reserved.</h5>
+ * <h5>&copy;2014 All rights reserved.</h5>
  * </pre>
  * 
- * @author : Shaheer
+ * @author : JIJESH
  * @since : 06 April 2013
  * @version : 1.0
  * 
