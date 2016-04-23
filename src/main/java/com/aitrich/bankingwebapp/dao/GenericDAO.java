@@ -18,7 +18,6 @@ import java.util.List;
  * @since : 06 April 2013
  * @version : 1.0
  * 
- * 
  */
 public interface GenericDAO<T, ID extends Serializable> extends Serializable {
 	/**
@@ -131,5 +130,4 @@ public interface GenericDAO<T, ID extends Serializable> extends Serializable {
 	 *            proxy
 	 */
 	public void initProxy(Object proxy);
-
 }

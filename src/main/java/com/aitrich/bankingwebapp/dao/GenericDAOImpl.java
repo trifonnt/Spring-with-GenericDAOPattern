@@ -30,7 +30,6 @@ import org.springframework.transaction.annotation.Transactional;
  * @since : 06 April 2013
  * @version : 1.0
  * 
- * 
  */
 @Repository("GenericDAO")
 @Transactional

@@ -15,19 +15,17 @@ import com.aitrich.bankingwebapp.service.UserAccountService;
 @Controller
 public class PersonController {
 
-	protected static Logger logger = Logger.getLogger("PersonController");
+	protected static Logger logger = Logger.getLogger(PersonController.class);
 
 	@Autowired
 	private UserAccountService userAccountService;
+
 
 	@RequestMapping(value = { "/", "/welcome" }, method = RequestMethod.GET)
 	public String getPage() {
 		logger.info("entering showAddGreetingPage()");
 
-	
-
 		return "person";
-
 	}
 
 	@RequestMapping(value = "/greetings.html", method = RequestMethod.POST)
@@ -38,8 +36,6 @@ public class PersonController {
 		userAccountService.saveUserAcoount(account);
 		logger.info("entering addGreetingAndShowAll()");
 
-	
-	
 		return "greetings";
 	}
 
@@ -47,5 +43,4 @@ public class PersonController {
 	public List<UserAccount> findAllUserAccount() {
 		return userAccountService.findAllUserAccount();
 	}
-
 }

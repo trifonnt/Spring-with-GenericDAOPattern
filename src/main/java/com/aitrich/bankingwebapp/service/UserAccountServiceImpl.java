@@ -11,8 +11,10 @@ import com.aitrich.bankingwebapp.model.UserAccount;
 
 @Service("userAccountService")
 public class UserAccountServiceImpl implements UserAccountService {
+
 	@Autowired
 	private UserAcoountDao userAccountDao;
+
 
 	@Transactional
 	public void saveUserAcoount(UserAccount userAccount) {
@@ -21,7 +23,6 @@ public class UserAccountServiceImpl implements UserAccountService {
 
 	@Transactional
 	public UserAccount findUserAcoountById(long id) {
-
 		return userAccountDao.findByPrimaryKey(id);
 	}
 
@@ -36,9 +37,6 @@ public class UserAccountServiceImpl implements UserAccountService {
 	}
 
 	public List<UserAccount> findAllUserAccount() {
-		
 		return userAccountDao.findAll();
 	}
-	
-
 }
