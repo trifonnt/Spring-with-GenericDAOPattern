@@ -6,6 +6,15 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java-version>1.8</java-version>
+		<org.springframework-version>4.0.6.RELEASE</org.springframework-version>
+		<org.aspectj-version>1.7.4</org.aspectj-version>
+		<org.slf4j-version>1.7.5</org.slf4j-version>
+		<hibernate.version>4.3.5.Final</hibernate.version>
+	</properties>
+
 	<dependencies>
 		<!-- Spring -->
 		<dependency>
@@ -23,7 +32,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>4.0.6.RELEASE</version>
+			<version>${org.springframework-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -164,8 +173,8 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
-
 	</dependencies>
+
 	<repositories>
 		<repository>
 			<id>spring-milestone</id>
@@ -173,13 +182,7 @@
 			<url>http://repo.springsource.org/milestone/</url>
 		</repository>
 	</repositories>
-	<properties>
-		<java-version>1.6</java-version>
-		<org.springframework-version>4.0.3.RELEASE</org.springframework-version>
-		<org.aspectj-version>1.7.4</org.aspectj-version>
-		<org.slf4j-version>1.7.5</org.slf4j-version>
-		<hibernate.version>4.3.5.Final</hibernate.version>
-	</properties>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -199,10 +202,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.5.1</version>
+				<version>3.5.1</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>${java-version}</source>
+					<target>${java-version}</target>
 					<compilerArgument>-Xlint:all</compilerArgument>
 					<showWarnings>true</showWarnings>
 					<showDeprecation>true</showDeprecation>
