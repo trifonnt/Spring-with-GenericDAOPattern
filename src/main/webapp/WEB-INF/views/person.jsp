@@ -20,7 +20,7 @@
 	<table>
 		<tr>
 			<td>Add your greeting:</td>
-                        <td><form:input path="greeting.greetingText" size="100"/></td>
+			<td><form:input path="greeting.greetingText" size="100"/></td>
 		</tr>
 		<tr>
 			<td>What's your favorite color?</td>
