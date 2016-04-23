@@ -13,27 +13,25 @@
 	</style>
 </head>
 <body>
-<h1>
-	Add a Person
-</h1>
-<form:form action="greetings.html" modelAttribute="greetingform"> 	
+<h1>Add a Person</h1>
+<form:form action="greetings.html" modelAttribute="greetingform">
 	<table>
 		<tr>
 			<td>Add your greeting:</td>
-			<td><form:input path="greeting.greetingText" size="100"/></td>
+			<td><form:input path="greetingText" size="100"/></td>
 		</tr>
 		<tr>
 			<td>What's your favorite color?</td>
-			<td> 
-				<form:select path="color.colorCode">
-            		<form:option value="" label="--Please Select"/>
-            		<form:options items="${colorlist}" itemValue="colorCode" itemLabel="colorName"/>
-        		</form:select>
+			<td>
+				<form:select path="selectedColorCode">
+					<form:option value="" label="--Please Select--"/>
+					<form:options items="${greetingform.colorList}" itemValue="colorCode" itemLabel="colorName"/>
+        </form:select>
 			</td>
-		</tr>		
+		</tr>
 		<tr>
 			<td colspan="2" align="center">
-				<input type="submit" value="Submit" />	
+				<input type="submit" value="Submit" />
 			</td>
 		</tr>
 	</table>
